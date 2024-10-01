@@ -1,5 +1,6 @@
 from fastapi import FastAPI, Query
 from fastapi.responses import FileResponse
+import myfunct
 
 app = FastAPI(
     title="Stack Overflow Tags Predictions API",
@@ -11,4 +12,10 @@ async def get_homepage():
 
 @app.get("/tag/")
 async def get_tag(n: int = Query(...), s: str = Query(...)):
-    return {"Nombre de tags": n, "Sentence": s}
+    tag = myfunct.predict_tags(s, n)
+    return {
+        "Nombre de tags": n,
+        "Sentence": s,
+        "Tags": tag
+    }
+    #return {"Nombre de tags": n, "Sentence": s}
