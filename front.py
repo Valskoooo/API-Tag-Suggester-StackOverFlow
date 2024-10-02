@@ -1,7 +1,8 @@
 import streamlit as st
 import requests
+import var
 
-API_URL = "http://127.0.0.1:8000"
+API_URL = var.API_URL
 
 st.title("Stack Overflow Tags Predictions API")
 st.markdown("This is a simple web app that uses a Machine Learning model to predict tags for a given sentence.")

@@ -1,4 +1,4 @@
-name: Push Event Workflow - Unit Testing w/ Pytest
+name: Push Event Workflow Unit Testing w/ Pytest
 
 on: push 
 

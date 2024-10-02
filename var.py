@@ -1,0 +1,3 @@
+API_IP = "127.0.0.1"
+API_PORT = 8000
+API_URL = f"http://{API_IP}:{API_PORT}"
