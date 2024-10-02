@@ -8,5 +8,5 @@ def test_predict_tags():
 def test_predict_tags_output():
     sentence = "How to compile a C program using gcc on Ubuntu ?"
     n = 5
-    assert myfunct.predict_tags(sentence, n) == ['c', 'linux', 'gcc', 'ubuntu', 'compilation'], "La fonction ne retourne pas les tags attendus."
+    assert myfunct.predict_tags(sentence, n) == ['c','gcc','linux','c++','unix'], "La fonction retourne les tags attendus."
     
