@@ -4,7 +4,7 @@ from sklearn.preprocessing import MultiLabelBinarizer
 import tensorflow_hub as hub
 
 embed = hub.load("https://tfhub.dev/google/universal-sentence-encoder/4")
-model, X_test_use, y_pred_use, y_mlb, y_train = joblib.load('model/model_use_relog-v2.joblib')
+model, X_test_use, y_pred_use, y_mlb, y_train = joblib.load('model/model_use_relog-v5.joblib')
 mlb = MultiLabelBinarizer()
 y_mlb = mlb.fit_transform(y_train)
 
