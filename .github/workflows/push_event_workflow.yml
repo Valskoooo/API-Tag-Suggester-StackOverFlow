@@ -1,0 +1,17 @@
+name: Push Event Workflow - Unit Testing w/ Pytest
+
+on: push 
+
+jobs:
+  unit-testing:
+    runs-on: ubuntu-latest 
+    
+    steps:
+    - name : Checkout code
+      uses : actions/checkout@v2
+      
+    - name : Install Packages 
+      run : pip install pytest streamlit fastapi tensorflow_hub joblib scikit-learn numpy
+      
+    - name : Run tests 
+      run : pytest test.py
