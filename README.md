@@ -13,7 +13,7 @@ La documentation de l'API est accessible à l'adresse suivante : [http://localho
 
 ## Prédictions de Tags
 
-Pour prédire des tags, utilisez la page suivante : `/tags`, avec les paramètres suivants :
+Pour prédire des tags, utilisez la page suivante : `/tag`, avec les paramètres suivants :
 
 - `s` : La phrase d'entrée (obligatoire).
 - `n` : Le nombre de tags à retourner (obligatoire).
