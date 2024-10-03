@@ -2,6 +2,15 @@ import joblib
 import numpy as np
 from sklearn.preprocessing import MultiLabelBinarizer
 import tensorflow_hub as hub
+import tensorflow as tf
+import os
+
+os.environ['CUDA_VISIBLE_DEVICES'] = ''    
+
+if tf.test.gpu_device_name():
+    print('GPU found')
+else:
+    print("No GPU found")
 
 embed = hub.load("https://tfhub.dev/google/universal-sentence-encoder/4")
 model, X_test_use, y_pred_use, y_mlb, y_train = joblib.load('model/model_use_relog-v5.joblib')
