@@ -27,4 +27,4 @@ L'API retourne un JSON contenant :
   "phrase": "Votre phrase ici",
   "nombre_de_tags": n,
   "tags_predits": ["tag1", "tag2", "tag3", ...]
-}
+}```
