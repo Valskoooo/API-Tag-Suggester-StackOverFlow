@@ -4,6 +4,7 @@ from sklearn.preprocessing import MultiLabelBinarizer
 import tensorflow_hub as hub
 import tensorflow as tf
 import os
+import zipfile
 
 os.environ['CUDA_VISIBLE_DEVICES'] = ''    
 
@@ -13,6 +14,8 @@ else:
     print("No GPU found")
 
 embed = hub.load("https://tfhub.dev/google/universal-sentence-encoder/4")
+with zipfile.ZipFile('model/model_use_relog-v5.joblib.zip', 'r') as zip_ref:
+    zip_ref.extractall('model/')
 model, X_test_use, y_pred_use, y_mlb, y_train = joblib.load('model/model_use_relog-v5.joblib')
 mlb = MultiLabelBinarizer()
 y_mlb = mlb.fit_transform(y_train)
